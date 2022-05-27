@@ -1,0 +1,113 @@
+﻿@model IEnumerable<SysAplicativo.Models.DbPatrimonio>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.numetiqueta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nomepatrimonio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.descricaopatrimonio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.valorpatrimonio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.idcategoria)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.idlocal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.iddepartamento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.marcaModelo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dataaquisicao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.databaixa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.numNf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.numserie)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.idfornecedor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.datagarantia)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.numetiqueta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nomepatrimonio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.descricaopatrimonio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.valorpatrimonio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idcategoria)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idlocal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.iddepartamento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.marcaModelo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dataaquisicao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.databaixa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.numNf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.numserie)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idfornecedor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.datagarantia)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
